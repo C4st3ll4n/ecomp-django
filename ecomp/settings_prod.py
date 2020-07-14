@@ -3,8 +3,8 @@ import dj_database_url
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-DEBUG = True
-
+DEBUG = False
+ALLOWED_HOSTS.append("ecompzineo.herokuapp.com")
 MIDDLEWARE.append("whitenoise.middleware.WhiteNoiseMiddleware")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
