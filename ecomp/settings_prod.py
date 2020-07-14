@@ -3,7 +3,7 @@ import dj_database_url
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-DEBUG = False
+DEBUG = True
 
 MIDDLEWARE.append("whitenoise.middleware.WhiteNoiseMiddleware")
 
