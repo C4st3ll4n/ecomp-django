@@ -1,0 +1,1 @@
+web: gunicorn ecomp.wsgi --max-request 1200
