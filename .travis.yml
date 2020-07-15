@@ -3,9 +3,20 @@ python:
   - "3.7.3"
 stages:
   - name: test
+  - name: deploy
 
 jobs:
   include:
     - stage: test
       name: Unit test
       script: python manage.py test
+    - stage: deploy
+      name: Deploy on heroku
+      script: /bin/true
+      deploy:
+        provider: heroku
+        user: "p13dr0h@gmail.com"
+        password: "!@#H3nr1qu3!@#"
+        app: ecompzineo
+        on: master
+        run: "python manage.py migrate"
